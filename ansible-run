@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 # Let the magic begin!
-sudo ansible-playbook -t install local.yml --ask-become-pass --ask-vault-pass
+ansible-playbook -t install local.yml --ask-become-pass --ask-vault-pass
