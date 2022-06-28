@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
 
-# Install ansible
-sudo apt install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install -y ansible
-
-# Pull ansible
-sudo ansible-pull -U https://github.com/bytefl0w/ansible.git
+# Let the magic begin!
+sudo ansible-playbook -t install local.yml --ask-become-pass --ask-vault-pass
