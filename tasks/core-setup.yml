@@ -1,0 +1,26 @@
+- name: Install Sys Packages (1/3)
+  become: true
+  apt:
+    name: ["build-essential", "cmake", "pkg-config", "libpthread-stubs0-dev"]
+  tags:
+    - install
+    - neovim
+    - core
+      
+- name: Install Sys Packages (2/3)
+  become: true
+  apt:
+    name: ["lua5.1", "unzip", "libtool", "libtool-bin"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: Install Sys Packages (3/3)
+  become: true
+  apt:
+    name: ["curl", "htop", "golang", "ninja-build", "python3-pip", "moreutils", "clangd", "gettext"]
+  tags:
+    - install
+    - neovim
+    - core
