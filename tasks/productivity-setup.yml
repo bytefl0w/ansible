@@ -12,3 +12,6 @@
   become: true
   apt:
     name: ["tmux", "fzf", "xclip", "tldr", "shutter", "screenkey"]
+  tags:
+    - install
+    - productivity
